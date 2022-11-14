@@ -7,7 +7,7 @@ function Favorites() {
   return (
     // <div>{favorites && favorites.map((coin) => <li>{coin.name}</li>)}</div>
 
-    <div className="flex flex-col justify-center h-full">
+    <div className="flex flex-col justify-center h-screen">
       <div className="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
         <header className="px-5 py-4 border-b border-gray-100">
           <h2 className="font-semibold text-gray-800">Favorites</h2>
@@ -63,7 +63,7 @@ function Favorites() {
                       </td>
                       <td className="p-2 whitespace-nowrap">
                         <div className="text-center text-gray-800">
-                          {parseInt(coin.market_cap)}
+                          {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(coin.market_cap)}
                         </div>
                       </td>
                     </tr>
